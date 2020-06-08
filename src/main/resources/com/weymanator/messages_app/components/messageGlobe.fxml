@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="200.0" style="-fx-background-color: transparent;" type="GridPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints fx:id="mainContainer" halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label fx:id="date" text="Date" textFill="WHITE" GridPane.rowIndex="1" />
+      <StackPane fx:id="messageContainer" alignment="CENTER_LEFT" minHeight="60.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #4A4848; -fx-padding: 22;">
+         <children>
+            <Label fx:id="message" text="Message" textFill="WHITE" wrapText="true" />
+         </children>
+      </StackPane>
+   </children>
+</fx:root>

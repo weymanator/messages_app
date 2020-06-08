@@ -1,0 +1,8 @@
+# IDE files
+.idea/
+
+# Gradle generate files
+.gradle/
+
+# Build files
+build/

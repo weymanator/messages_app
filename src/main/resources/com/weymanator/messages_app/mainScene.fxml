@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.weymanator.messages_app.mainSceneController">
+   <left>
+      <BorderPane maxWidth="344.0" minWidth="344.0" prefWidth="344.0" style="-fx-background-color: #2D2C2C;" BorderPane.alignment="CENTER">
+         <top>
+            <HBox alignment="CENTER_LEFT" maxHeight="60.0" minHeight="60.0" prefHeight="60.0" style="-fx-border-style: solid; -fx-border-color: #1C1C1C; -fx-border-width: 0 0 1 0;" BorderPane.alignment="CENTER_LEFT">
+               <children>
+                  <Label style="-fx-padding: 0 0 0 22;" text="Conversaciones" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Regular" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <VBox fx:id="chatsContainer" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </left>
+   <center>
+      <BorderPane prefHeight="400.0" prefWidth="236.0" style="-fx-background-color: #1C1C1C;" BorderPane.alignment="CENTER">
+         <top>
+            <GridPane fx:id="chatHeader" maxHeight="60.0" minHeight="60.0" prefHeight="60.0" style="-fx-border-style: solid; -fx-border-width: 0 0 1 0; -fx-border-color: #2D2C2C;" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <StackPane fx:id="avatarContainer" prefHeight="150.0" prefWidth="200.0" />
+                  <Label fx:id="userName" styleClass="labelUserName" text="User Name" textFill="WHITE" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Roboto Medium" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </top>
+         <bottom>
+            <StackPane fx:id="inputContainer" minHeight="80.0" prefHeight="80.0" prefWidth="200.0" style="-fx-padding: 0 22 0 22;" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="textInput" focusTraversable="false" maxWidth="800.0" minHeight="50.0" prefWidth="500.0" promptText="Escribe un mensaje" style="-fx-background-color: -fx-focus-color, #4a4848; -fx-background-insets: 0, 0 0 3 0; -fx-background-radius: 5 5 0 0; -fx-text-fill: white;">
+                     <font>
+                        <Font name="Roboto Regular" size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </StackPane>
+         </bottom>
+         <center>
+            <ScrollPane fitToHeight="true" fitToWidth="true" maxWidth="800.0" style="-fx-background-color: transparent; -fx-background: #1C1C1C;" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+               <content>
+                  <VBox fx:id="messagesContainer" BorderPane.alignment="CENTER" />
+               </content>
+            </ScrollPane>
+         </center></BorderPane>
+   </center>
+</BorderPane>
